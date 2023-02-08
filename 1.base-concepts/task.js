@@ -8,18 +8,18 @@ function solveEquation(a, b, c) {
   if (d < 0) {
     arr = [];
   } else if (d === 0) {
-    arr = [(-b + Math.sqrt(d))/(2*a)];
+    arr = [(-b + Math.sqrt(d)) / (2 * a)];
   } else {
-    x1 = (-b + Math.sqrt(d) )/(2*a);
-    x2 = (-b - Math.sqrt(d) )/(2*a) ;
+    x1 = (-b + Math.sqrt(d)) / (2 * a);
+    x2 = (-b - Math.sqrt(d)) / (2 * a);
     arr.push(x1, x2);
   }
-  return arr; 
+  return arr;
 }
 {
-console.log(solveEquation(1, 5, 4));
-console.log(solveEquation(1, 2, 1));
-console.log(solveEquation(1, 2, 10));
+  console.log(solveEquation(1, 5, 4));
+  console.log(solveEquation(1, 2, 1));
+  console.log(solveEquation(1, 2, 10));
 }
 function calculateTotalMortgage(percent, contribution, amount, date) {
   // Контроль корректность введенных данных.    
@@ -41,11 +41,11 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     return (`“Параметр "Общая стоимость" содержит неправильное значение ${amount}”.`);
   }
   percent = percent / 1200;
-  let returnAmount = amount - contribution;   
-  let monthlyPay = returnAmount * (percent + percent / (((1 + percent) ** date) - 1)); 
-  let totalAmount = monthlyPay * date;  
-  console.log(totalAmount.toFixed(2));
-  return totalAmount.toFixed(2); 
+  let returnAmount = amount - contribution;
+  let monthlyPay = returnAmount * (percent + percent / (((1 + percent) ** date) - 1));
+  let totalAmount = monthlyPay * date;
+
+  return totalAmount.toFixed(2);
 }
 
 console.log(calculateTotalMortgage('test', 1, 1, 1));
@@ -55,4 +55,4 @@ console.log(calculateTotalMortgage(10, 0, 50000, 12));
 console.log(calculateTotalMortgage(10, 1000, 50000, 12));
 console.log(calculateTotalMortgage(10, 0, 20000, 24));
 console.log(calculateTotalMortgage(10, 1000, 20000, 24));
-  console.log(calculateTotalMortgage(10, 20000, 20000, 24));
+console.log(calculateTotalMortgage(10, 20000, 20000, 24));
