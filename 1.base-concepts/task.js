@@ -1,25 +1,26 @@
-"use strict"
+'use strict'
+
 function solveEquation(a, b, c) {
-  if (a == 0)
-    return false;
-  let arr = {};
-  let D = b * b - 4 * a * c;
-  if (D < 0)
-    return false;
-  if (D == 0)
-    arr['Корень уравнения'] = (-b + Math.sqrt(D)) / (2 * a);
-  else if (D > 0) {
-    let tmp = [];
-    tmp.push((-b + Math.sqrt(D)) / (2 * a));
-    tmp.push((-b - Math.sqrt(D)) / (2 * a));
-    arr['2 корня уравнения'] = tmp;
+  let arr = [];
+  let x1;
+  let x2;
+  let d = b ** 2 - 4 * a * c;
+  if (d < 0) {
+    arr = [];
+  } else if (d === 0) {
+    arr = [(-b + Math.sqrt(d))/(2*a)];
+  } else {
+    x1 = (-b + Math.sqrt(d) )/(2*a);
+    x2 = (-b - Math.sqrt(d) )/(2*a) ;
+    arr.push(x1, x2);
   }
-  return arr;
+  return arr; 
 }
+{
 console.log(solveEquation(1, 5, 4));
 console.log(solveEquation(1, 2, 1));
 console.log(solveEquation(1, 2, 10));
-
+}
 function calculateTotalMortgage(percent, contribution, amount, date) {
   // Контроль корректность введенных данных.    
   if (percent > 0) {
