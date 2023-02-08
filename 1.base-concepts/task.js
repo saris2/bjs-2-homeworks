@@ -16,13 +16,15 @@ let solveEquation = (a, b, c) => {
   }
   return res;
 }
+console.log(solveEquation(1, 5, 4));
 console.log(solveEquation(1, 2, 1));
+console.log(solveEquation(1, 2, 10));
 
-let calculateTotalMortgage = (percent, contribution, amount, countMonths) 
-  console.log(Number.isNaN(percent, contribution, amount, countMonths));
-let P = ((percent/100)/12);
+let calculateTotalMortgage = (percent, contribution, amount, countMonths)
+console.log(Number.isNaN(percent, contribution, amount, countMonths));
+let P = ((percent / 100) / 12);
 let S = (amount - contribution);
-let platezh = S * (P + (P / (((1 + P)^countMonths) - 1)));
-let all_prise = platezh*countMonths;
+let platezh = S * (P + (P / (((1 + P) ^ countMonths) - 1)));
+let all_prise = platezh * countMonths;
 console.log(calculateTotalMortgage(10, 0, 50000, 12));
-console.log (Number(platezh).toFixed(2));
+console.log(Number(platezh).toFixed(2));
