@@ -40,9 +40,9 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   } else if (amount != 0) {
     return (`“Параметр "Общая стоимость" содержит неправильное значение ${amount}”.`);
   }
-  let returnAmount = amount - contribution   
-  percent = percent / 1200; 
-  let monthlyPay = amount * (percent + percent / (((1 + percent) ** date) - 1)); 
+  percent = percent / 1200;
+  let returnAmount = amount - contribution;   
+  let monthlyPay = returnAmount * (percent + percent / (((1 + percent) ** date) - 1)); 
   let totalAmount = monthlyPay * date;  
   console.log(totalAmount.toFixed(2));
   return totalAmount.toFixed(2); 
