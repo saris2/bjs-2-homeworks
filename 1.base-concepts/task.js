@@ -48,9 +48,9 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   return totalAmount.toFixed(2); 
 }
 
-console.log(calculateTotalMortgage(-1, 1, 1, 1));
-console.log(calculateTotalMortgage(1, -1, 1, 1));
-console.log(calculateTotalMortgage(1, 1, -1, 1));
+console.log(calculateTotalMortgage('test', 1, 1, 1));
+console.log(calculateTotalMortgage(1, 'test', 1, 1));
+console.log(calculateTotalMortgage(1, 1, 'test', 1));
 console.log(calculateTotalMortgage(10, 0, 50000, 12));
 console.log(calculateTotalMortgage(10, 1000, 50000, 12));
 console.log(calculateTotalMortgage(10, 0, 20000, 24));
