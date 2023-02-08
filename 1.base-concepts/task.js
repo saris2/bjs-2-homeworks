@@ -40,15 +40,19 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   } else if (amount != 0) {
     return (`“Параметр "Общая стоимость" содержит неправильное значение ${amount}”.`);
   }
-  // Расчет количества месяцев, на которые оформляется ипотека. 
-  let currentDate = new Date();  // Дата с какого числа берется ипотеки 
-  date = new Date(window.date.value); //Дата до какого числа берется ипотека
-  let payPeriod = 0 - ((currentDate.getFullYear() - date.getFullYear()) * 12) - (currentDate.getMonth() - date.getMonth());
-  date = payPeriod; // Количество месяцев, на которые оформляется ипотека.
-  let returnAmount = amount - contribution  // Сумма, которую необходимо вернуть банку. 
-  percent = percent / 1200; // Процентная ставка
-  let monthlyPay = amount * (percent + percent / (((1 + percent) ** date) - 1)); // Ежемесячная оплата
-  let totalAmount = monthlyPay * date;  //  общая сумма, которую придется заплатить клиенту.
+  let returnAmount = amount - contribution   
+  percent = percent / 1200; 
+  let monthlyPay = amount * (percent + percent / (((1 + percent) ** date) - 1)); 
+  let totalAmount = monthlyPay * date;  
   console.log(totalAmount.toFixed(2));
-  return totalAmount.toFixed(2); //  Возврат результата в функцию
+  return totalAmount.toFixed(2); 
 }
+
+console.log(calculateTotalMortgage(-1, 1, 1, 1));
+console.log(calculateTotalMortgage(1, -1, 1, 1));
+console.log(calculateTotalMortgage(1, 1, -1, 1));
+console.log(calculateTotalMortgage(10, 0, 50000, 12));
+console.log(calculateTotalMortgage(10, 1000, 50000, 12));
+console.log(calculateTotalMortgage(10, 0, 20000, 24));
+console.log(calculateTotalMortgage(10, 1000, 20000, 24));
+  console.log(calculateTotalMortgage(10, 20000, 20000, 24));
