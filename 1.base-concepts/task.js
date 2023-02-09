@@ -50,7 +50,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 console.log(calculateTotalMortgage('test', 1, 1, 1));
 console.log(calculateTotalMortgage(1, 'test', 1, 1));
 console.log(calculateTotalMortgage(1, 1, 'test', 1));
-console.log(calculateTotalMortgage(Number("10"), Number("0"), Number("50000"), Number("12")));
+console.log(calculateTotalMortgage(10, 0, 50000, 12));
 console.log(calculateTotalMortgage(10, 1000, 50000, 12));
 console.log(calculateTotalMortgage(10, 0, 20000, 24));
 console.log(calculateTotalMortgage(10, 1000, 20000, 24));
