@@ -14,8 +14,8 @@ function getArrayParams(...arr) {
     }
    }
   avg = Number(parseFloat((sum / arr.length).toFixed(2)));
-  return {min, max, avg};
+  return {min:min, max:max, avg:avg};
 }
 console.log(getArrayParams(-99, 99, 10));
-console.log(getArrayParams(1, 2, 3, -100, Number(10)));
+console.log(getArrayParams(1, 2, 3, -100, 10));
 console.log(getArrayParams(5));
