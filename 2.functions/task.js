@@ -1,5 +1,5 @@
 'use strict'
-function getArrayParams(arr) {
+function getArrayParams(...arr) {
   let min = Infinity;
   let max = -Infinity;
   let sum = 0;
@@ -16,6 +16,6 @@ function getArrayParams(arr) {
   avg = Number(parseFloat((sum / arr.length).toFixed(2)));
   return {min, max, avg};
 }
-console.log(getArrayParams([-99, 99, 10]));
-console.log(getArrayParams([1, 2, 3, -100, Number(10)]));
-console.log(getArrayParams([5]));
+console.log(getArrayParams(-99, 99, 10));
+console.log(getArrayParams(1, 2, 3, -100, Number(10)));
+console.log(getArrayParams(5));
