@@ -16,6 +16,6 @@ function getArrayParams(arr) {
   avg = Number(parseFloat((sum / arr.length).toFixed(2)));
   return {min, max, avg};
 }
-console.log(getArrayParams([-99, 99, 10]));
-console.log(getArrayParams([1, 2, 3, -100, 10]));
-console.log(getArrayParams([5]));
+console.log(getArrayParams([Number(-99), Number(99), Number(10)]));
+console.log(getArrayParams([Number(1), Number(2), Number(3), Number(-100), Number(10)]));
+console.log(getArrayParams([Number(5)]));
