@@ -6,10 +6,10 @@ function getArrayParams(...arr) {
   let avg = 0;
   for (let i = 0; i < arr.length; i++) {
     sum = sum + arr[i];
-    if (arr[i] > max) {
+    if (arr[i] > max)  {
       max = arr[i];
     }
-    if (arr[i] < min) {
+    if (arr[i] < min)  {
       min = arr[i];
     }
   }
@@ -20,16 +20,21 @@ console.log(getArrayParams(-99, 99, 10));
 console.log(getArrayParams(1, 2, 3, -100, 10));
 console.log(getArrayParams(5));
 
+
+
 'use strict'
 function summElementsWorker(...arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+    sum += arr[i]; 
   }
   return sum;
 }
 console.log(summElementsWorker());
 console.log(summElementsWorker(10, 10, 11, 20, 10));
+console.log(summElementsWorker(0, 0, 0, -1, -100));
+
+
 
 'use strict'
 function differenceMaxMinWorker(...arr) {
@@ -38,10 +43,16 @@ function differenceMaxMinWorker(...arr) {
     if (max < arr[i]) max = arr[i];
     if (min > arr[i]) min = arr[i];
   }
+  if (arr === undefined || arr.length == 0) {
+    return 0;
+}
   return max - min;
 }
-console.log(summElementsWorker());
+console.log(differenceMaxMinWorker());
 console.log(differenceMaxMinWorker(10, 10, 11, 20, 10));
+console.log(differenceMaxMinWorker(0, 0, 0, -1, -100));
+
+
 
 'use strict'
 function differenceEvenOddWorker(...arr) {
